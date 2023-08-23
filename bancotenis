@@ -26,10 +26,10 @@ cor VARCHAR(25);
 numero CHAR(2);
 categoria VARCHAR(30);
 descricao VARCHAR(45);
-
+forn_cnpj VARCHAR(14)
 
 PRIMARY KEY(modelo)
-
+FOREING KEY (forn_cnpj) REFERENCES fornecedores(cnpj)
 )
 
 
