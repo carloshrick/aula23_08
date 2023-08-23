@@ -1,0 +1,74 @@
+CREATE DATABASE loja;
+
+USE loja;
+
+CREATE TABLE fornecedores
+(
+cnpj VARCHAR(14);
+razao_social VARCHAR(45);
+insc_estadual VARCJAR(22);
+endereco VARCHAR(45);
+cidade VARCHAR(20);
+estado CHAR(2);
+email VARCHAR(35);
+
+
+PRIMARY KEY(cnpj)
+
+);
+
+
+
+CREATE TABLE produto
+(
+modelo VARCHAR(45);
+cor VARCHAR(25);
+numero CHAR(2);
+categoria VARCHAR(30);
+descricao VARCHAR(45);
+
+
+PRIMARY KEY(modelo)
+
+)
+
+
+CREATE TABLE pedido
+(
+numero_pedido INT;
+valor DECIMAL(12);
+data_pedido DATETIME;
+data_entrega DATE;
+quantidade INT;
+
+PRIMARY KEY(numero_pedido)
+
+)
+
+
+
+CREATE TABLE cliente
+(
+nome VARCHAR(45);
+cpf VARCHAR(11);
+endereco VARCHAR(45);
+bairro VARCHAR(20);
+cidade VARCHAR(20);
+estado CHAR(2);
+email VARCHAR(35);
+
+
+PRIMARY KEY (cpf))
+
+
+
+CREATE TABLE venda 
+(
+valor DECIMAL(8);
+numero_venda VARCHAR(1000);
+taxa_sobreavenda DECIMAL(4);
+frete DECIMAL(4); 
+
+PRIMARY KEY(numero_venda)
+
+)
